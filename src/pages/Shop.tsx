@@ -59,7 +59,7 @@ const Shop = () => {
     }
 
     return filtered;
-  }, [searchQuery, selectedCategory, sortBy]);
+  }, [searchQuery, selectedCategory, sortBy, selectedPriceRanges]);
 
   return (
     <div className="min-h-screen flex flex-col">
