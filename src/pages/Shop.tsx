@@ -2,10 +2,12 @@ import { useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
+import { PriceFilter, priceRanges } from "@/components/PriceFilter";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Search, SlidersHorizontal } from "lucide-react";
 import productsData from "@/data/products.json";
 
 const categories = ["All", "Sofas", "Couches", "Beds", "Dining Sets", "Office Chairs", "Night Stands", "Tables", "Wardrobes"];
@@ -14,13 +16,37 @@ const Shop = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("default");
+  const [selectedPriceRanges, setSelectedPriceRanges] = useState<string[]>([]);
+  const [showFilters, setShowFilters] = useState(false);
+
+  const handlePriceRangeToggle = (rangeId: string) => {
+    setSelectedPriceRanges((prev) =>
+      prev.includes(rangeId)
+        ? prev.filter((id) => id !== rangeId)
+        : [...prev, rangeId]
+    );
+  };
 
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = productsData.filter((product) => {
+      // Search filter
       const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            product.category.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      // Category filter
       const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      
+      // Price filter
+      let matchesPrice = true;
+      if (selectedPriceRanges.length > 0) {
+        matchesPrice = selectedPriceRanges.some((rangeId) => {
+          const range = priceRanges.find((r) => r.id === rangeId);
+          if (!range) return false;
+          return product.price >= range.min && product.price <= range.max;
+        });
+      }
+      
+      return matchesSearch && matchesCategory && matchesPrice;
     });
 
     // Sort products
@@ -51,18 +77,85 @@ const Shop = () => {
         </div>
 
         {/* Filters */}
-        <div className="mb-8 space-y-4">
-          {/* Search Bar */}
-          <div className="relative max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-            <Input
-              type="text"
-              placeholder="Search furniture..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10"
-            />
+        <div className="mb-8 space-y-6">
+          {/* Search Bar and Filter Toggle */}
+          <div className="flex gap-4 items-center">
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search furniture by name or category..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10"
+              />
+            </div>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center gap-2"
+            >
+              <SlidersHorizontal className="h-4 w-4" />
+              Filters
+              {selectedPriceRanges.length > 0 && (
+                <span className="ml-1 px-2 py-0.5 bg-primary text-primary-foreground rounded-full text-xs">
+                  {selectedPriceRanges.length}
+                </span>
+              )}
+            </Button>
           </div>
+
+          {/* Filter Panel */}
+          {showFilters && (
+            <Card className="p-6 animate-fade-in border-border">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Price Filter */}
+                <PriceFilter
+                  selectedRanges={selectedPriceRanges}
+                  onRangeToggle={handlePriceRangeToggle}
+                />
+                
+                {/* Active Filters Summary */}
+                <div className="space-y-4">
+                  <h3 className="font-inter font-semibold text-foreground">Active Filters</h3>
+                  <div className="space-y-2">
+                    {selectedPriceRanges.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {selectedPriceRanges.map((rangeId) => {
+                          const range = priceRanges.find((r) => r.id === rangeId);
+                          return (
+                            <Button
+                              key={rangeId}
+                              variant="secondary"
+                              size="sm"
+                              onClick={() => handlePriceRangeToggle(rangeId)}
+                              className="font-inter"
+                            >
+                              {range?.label} ×
+                            </Button>
+                          );
+                        })}
+                      </div>
+                    )}
+                    {(selectedPriceRanges.length > 0 || selectedCategory !== "All") && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => {
+                          setSelectedPriceRanges([]);
+                          setSelectedCategory("All");
+                        }}
+                        className="text-muted-foreground hover:text-foreground"
+                      >
+                        Clear all filters
+                      </Button>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          )}
 
           <div className="flex flex-wrap gap-4 items-center justify-between">
             {/* Category Filters */}
@@ -92,6 +185,11 @@ const Shop = () => {
                 <SelectItem value="new">New Arrivals</SelectItem>
               </SelectContent>
             </Select>
+          </div>
+
+          {/* Results Count */}
+          <div className="text-sm text-muted-foreground font-inter">
+            Showing {filteredAndSortedProducts.length} of {productsData.length} products
           </div>
         </div>
 
