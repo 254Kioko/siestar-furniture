@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Modern Linen Sofa",
+    "category": "Sofas",
+    "price": 45000,
+    "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+    "isNew": true
+  },
+  {
+    "id": 2,
+    "name": "L-Shape Sectional Couch",
+    "category": "Couches",
+    "price": 68000,
+    "image": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80",
+    "isNew": true
+  },
+  {
+    "id": 3,
+    "name": "Velvet Armchair",
+    "category": "Sofas",
+    "price": 22000,
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    "isNew": false
+  },
+  {
+    "id": 4,
+    "name": "King Size Bed Frame",
+    "category": "Beds",
+    "price": 55000,
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
+    "isNew": false
+  },
+  {
+    "id": 5,
+    "name": "6-Seater Dining Set",
+    "category": "Dining Sets",
+    "price": 82000,
+    "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&q=80",
+    "isNew": true
+  },
+  {
+    "id": 6,
+    "name": "Executive Office Chair",
+    "category": "Office Chairs",
+    "price": 18500,
+    "image": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=800&q=80",
+    "isNew": false
+  },
+  {
+    "id": 7,
+    "name": "Wooden Night Stand",
+    "category": "Night Stands",
+    "price": 12000,
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=800&q=80",
+    "isNew": false
+  },
+  {
+    "id": 8,
+    "name": "Marble Coffee Table",
+    "category": "Tables",
+    "price": 28000,
+    "image": "https://images.unsplash.com/photo-1565191999001-551c187427bb?w=800&q=80",
+    "isNew": true
+  },
+  {
+    "id": 9,
+    "name": "3-Door Wardrobe",
+    "category": "Wardrobes",
+    "price": 48000,
+    "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80",
+    "isNew": false
+  },
+  {
+    "id": 10,
+    "name": "Recliner Sofa Set",
+    "category": "Sofas",
+    "price": 72000,
+    "image": "https://images.unsplash.com/photo-1550254478-ead40cc54513?w=800&q=80",
+    "isNew": false
+  },
+  {
+    "id": 11,
+    "name": "Ergonomic Office Chair",
+    "category": "Office Chairs",
+    "price": 25000,
+    "image": "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?w=800&q=80",
+    "isNew": true
+  },
+  {
+    "id": 12,
+    "name": "Queen Size Upholstered Bed",
+    "category": "Beds",
+    "price": 48000,
+    "image": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80",
+    "isNew": false
+  }
+]
