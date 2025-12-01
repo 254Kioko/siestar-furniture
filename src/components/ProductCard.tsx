@@ -20,8 +20,11 @@ I'm interested in purchasing this item. Please let me know about availability an
 
 Thank you!`;
 
-  // WhatsApp URL using configured number
-  const whatsappLink = `https://wa.me/254728260288?text=${encodeURIComponent(message)}`;
+  // WhatsApp URL - use app protocol on mobile, web on desktop
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const whatsappLink = isMobile 
+    ? `whatsapp://send?phone=254728260288&text=${encodeURIComponent(message)}`
+    : `https://wa.me/254728260288?text=${encodeURIComponent(message)}`;
 
   return (
     <Card className="border border-border shadow-sm">

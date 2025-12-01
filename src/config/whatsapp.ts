@@ -9,5 +9,12 @@ export const getWhatsAppLink = (productName?: string) => {
     ? `Hello! I'm interested in the ${productName} from ${BUSINESS_NAME}.`
     : `Hello! I'd like to inquire about your furniture collection.`;
   
+  // Use mobile app protocol on mobile devices, web link on desktop
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  
+  if (isMobile) {
+    return `whatsapp://send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
+  }
+  
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 };
