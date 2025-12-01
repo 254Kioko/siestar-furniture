@@ -5,7 +5,8 @@ const ProductCard = ({ id, name, price, image, category }) => {
   // WhatsApp Number
   const phone = "254742048000"; // change to your number
 
-  // Message sent to WhatsApp
+  // Message sent to WhatsApp with product image
+  const imageUrl = image.startsWith('http') ? image : `${window.location.origin}${image}`;
   const message = `Hello, I would like to order this product:
   
 🛋 *${name}*
@@ -13,13 +14,14 @@ const ProductCard = ({ id, name, price, image, category }) => {
 📂 Category: ${category}
 
 🖼 Product Image:
-${window.location.origin}/${image}
+${imageUrl}
+
+I'm interested in purchasing this item. Please let me know about availability and delivery options.
 
 Thank you!`;
 
-  // WhatsApp URL
-  const whatsappLink =
-    "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+  // WhatsApp URL using configured number
+  const whatsappLink = `https://wa.me/254728260288?text=${encodeURIComponent(message)}`;
 
   return (
     <Card className="border border-border shadow-sm">
