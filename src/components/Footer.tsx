@@ -25,7 +25,7 @@ const Footer = () => {
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-inter text-sm"
               >
                 <Phone className="h-4 w-4" />
-                <span>WhatsApp: +254 712 345 678</span>
+                <span>WhatsApp: +254 728260288</span>
               </a>
               <div className="flex items-center gap-2 text-muted-foreground font-inter text-sm">
                 <MapPin className="h-4 w-4" />
