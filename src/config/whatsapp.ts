@@ -1,5 +1,5 @@
 // WhatsApp configuration
-export const WHATSAPP_NUMBER = "254712345678"; // Replace with actual Siestar Furnitures WhatsApp number
+export const WHATSAPP_NUMBER = "254728260288"; // Replace with actual Siestar Furnitures WhatsApp number
 export const BUSINESS_NAME = "Siestar Furnitures";
 export const BUSINESS_LOCATION = "Nairobi, Kenya";
 export const FACEBOOK_PAGE = "https://www.facebook.com/siestherfurniture/";
