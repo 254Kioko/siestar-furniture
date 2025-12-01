@@ -1,64 +1,55 @@
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { getWhatsAppLink } from "@/config/whatsapp";
-import { MessageCircle } from "lucide-react";
 
-interface ProductCardProps {
-  id: number;
-  name: string;
-  category: string;
-  price: number;
-  image: string;
-  isNew?: boolean;
-}
+const ProductCard = ({ id, name, price, image, category }) => {
+  // WhatsApp Number
+  const phone = "254742048000"; // change to your number
 
-const ProductCard = ({ name, category, price, image, isNew }: ProductCardProps) => {
+  // Message sent to WhatsApp
+  const message = `Hello, I would like to order this product:
+  
+🛋 *${name}*
+💵 Price: KES ${price.toLocaleString()}
+📂 Category: ${category}
+
+🖼 Product Image:
+${window.location.origin}/${image}
+
+Thank you!`;
+
+  // WhatsApp URL
+  const whatsappLink =
+    "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
   return (
-    <Card className="group overflow-hidden border-border hover:shadow-lg transition-all duration-300">
-      <div className="relative overflow-hidden aspect-[4/3]">
-        <img 
-          src={image} 
-          alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        {isNew && (
-          <Badge className="absolute top-3 right-3 bg-accent text-accent-foreground">
-            New
-          </Badge>
-        )}
-      </div>
-      
-      <div className="p-5 space-y-3">
-        <div>
-          <p className="text-xs font-inter text-muted-foreground uppercase tracking-wide">
-            {category}
-          </p>
-          <h3 className="font-playfair font-semibold text-lg text-foreground mt-1">
-            {name}
-          </h3>
+    <Card className="border border-border shadow-sm">
+      <CardContent className="p-4 space-y-3">
+
+        {/* Product image */}
+        <div className="aspect-square overflow-hidden rounded-lg">
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover"
+          />
         </div>
-        
-        <p className="font-inter font-bold text-xl text-primary">
-          KSh {price.toLocaleString()}
+
+        {/* Name */}
+        <h3 className="font-semibold text-lg">{name}</h3>
+
+        {/* Price */}
+        <p className="text-primary text-xl font-bold">
+          KES {price.toLocaleString()}
         </p>
-        
-        <Button 
-          asChild 
-          className="w-full"
-          size="lg"
+
+        {/* WhatsApp Order Button */}
+        <Button
+          className="w-full bg-green-600 hover:bg-green-700 text-white"
+          onClick={() => window.open(whatsappLink, "_blank")}
         >
-          <a 
-            href={getWhatsAppLink(name)} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Contact to Order
-          </a>
+          Order on WhatsApp
         </Button>
-      </div>
+      </CardContent>
     </Card>
   );
 };
