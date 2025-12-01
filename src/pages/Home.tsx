@@ -5,6 +5,9 @@ import heroImage from "@/assets/hero-furniture.jpg";
 import { getWhatsAppLink } from "@/config/whatsapp";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
+import products from "@/data/products.json";
+import ProductCard from "@/components/ProductCard";
 
 const Home = () => {
   return (
@@ -82,25 +85,90 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Featured Products Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-foreground mb-4">
+              Featured Collections
+            </h2>
+            <p className="font-inter text-lg text-muted-foreground max-w-2xl mx-auto">
+              Browse our handpicked selection of premium furniture pieces
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.slice(0, 4).map((product) => (
+              <ProductCard key={product.id} {...product} />
+            ))}
+          </div>
+          
+          <div className="text-center mt-10">
+            <Button asChild size="lg" variant="outline">
+              <Link to="/shop">View All Products</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
       <section className="py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-foreground mb-4">
+              Why Choose Siestar Furnitures?
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <BenefitCard 
+              number="01"
+              title="Quality Craftsmanship"
+              description="Every piece is carefully selected for durability and style."
+            />
+            <BenefitCard 
+              number="02"
+              title="Affordable Prices"
+              description="Premium furniture at competitive prices for every budget."
+            />
+            <BenefitCard 
+              number="03"
+              title="Fast Delivery"
+              description="Quick and reliable delivery across Nairobi and beyond."
+            />
+            <BenefitCard 
+              number="04"
+              title="Expert Support"
+              description="Our team is ready to help you find the perfect furniture."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-foreground mb-6">
-            Ready to Upgrade Your Space?
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl mb-6">
+            Ready to Transform Your Space?
           </h2>
-          <p className="font-inter text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Explore our full collection of premium furniture and find the perfect pieces for your home.
+          <p className="font-inter text-lg mb-8 max-w-2xl mx-auto opacity-90">
+            Get in touch with us today and let's bring your interior design vision to life.
           </p>
-          <Button asChild size="lg" className="group">
-            <Link to="/shop" className="flex items-center gap-2">
-              View All Products
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Button asChild size="lg" variant="secondary">
+              <Link to="/shop">Browse Collection</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
+                Contact Us Now
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
       <Footer />
+      <WhatsAppWidget />
     </div>
   );
 };
@@ -132,6 +200,28 @@ const Badge = ({ children, className }: { children: React.ReactNode; className?:
     <span className={`inline-block px-4 py-2 rounded-full text-sm font-medium border ${className}`}>
       {children}
     </span>
+  );
+};
+
+interface BenefitCardProps {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const BenefitCard = ({ number, title, description }: BenefitCardProps) => {
+  return (
+    <div className="text-center p-6 rounded-xl bg-background hover:shadow-lg transition-all duration-300">
+      <div className="font-playfair text-5xl font-bold text-primary/20 mb-3">
+        {number}
+      </div>
+      <h3 className="font-playfair font-semibold text-xl text-foreground mb-2">
+        {title}
+      </h3>
+      <p className="font-inter text-muted-foreground">
+        {description}
+      </p>
+    </div>
   );
 };
 
