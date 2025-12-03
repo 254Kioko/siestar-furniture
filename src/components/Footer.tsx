@@ -1,4 +1,5 @@
-import { Facebook, Phone, MapPin } from "lucide-react";
+import { Facebook, Phone, MapPin, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 import { BUSINESS_NAME, BUSINESS_LOCATION, FACEBOOK_PAGE, getWhatsAppLink } from "@/config/whatsapp";
 
 const Footer = () => {
@@ -49,10 +50,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center">
+        <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground font-inter text-sm">
             © {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
           </p>
+          <Link 
+            to="/admin" 
+            className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-inter text-sm"
+          >
+            <Settings className="h-4 w-4" />
+            <span>Admin</span>
+          </Link>
         </div>
       </div>
     </footer>
