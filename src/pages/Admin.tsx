@@ -119,9 +119,10 @@ const Admin = () => {
   };
 
   const downloadTemplate = () => {
-    const template = `Product Name,Category,Price,Image URL,Is New
-Modern Linen Sofa,Sofas,45000,https://example.com/image.jpg,Yes
-L-Shape Sectional,Couches,68000,https://example.com/image2.jpg,No`;
+    const template = `Product Name,Category,Price,Image,Is New
+Modern Linen Sofa,Sofas,45000,/products/sofa-1.jpg,Yes
+L-Shape Sectional,Couches,68000,/products/couch-1.jpg,No
+King Size Bed,Beds,55000,/products/bed-1.jpg,No`;
     const blob = new Blob([template], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -200,18 +201,27 @@ L-Shape Sectional,Couches,68000,https://example.com/image2.jpg,No`;
           <Card>
             <CardHeader>
               <CardTitle>Expected CSV Format</CardTitle>
-              <CardDescription>Your CSV should have these columns</CardDescription>
+              <CardDescription>Use short local paths for images</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-4">
               <div className="bg-muted p-4 rounded-md text-sm font-mono overflow-x-auto">
                 <p className="font-semibold text-foreground">Required columns:</p>
                 <ul className="mt-2 space-y-1 text-muted-foreground">
                   <li>• <span className="text-foreground">Product Name</span> - Name of the product</li>
                   <li>• <span className="text-foreground">Category</span> - Sofas, Beds, Tables, etc.</li>
                   <li>• <span className="text-foreground">Price</span> - Number only (e.g., 45000)</li>
-                  <li>• <span className="text-foreground">Image URL</span> - Direct link to image</li>
+                  <li>• <span className="text-foreground">Image</span> - Short path like <code className="bg-background px-1 rounded">/products/sofa-1.jpg</code></li>
                   <li>• <span className="text-foreground">Is New</span> - Yes/No for new arrivals</li>
                 </ul>
+              </div>
+              <div className="bg-primary/10 border border-primary/20 p-4 rounded-md text-sm">
+                <p className="font-semibold text-foreground mb-2">📁 How to add images:</p>
+                <ol className="list-decimal list-inside space-y-1 text-muted-foreground">
+                  <li>Save images from Facebook to your computer</li>
+                  <li>Rename them simply: <code className="bg-background px-1 rounded">sofa-1.jpg</code>, <code className="bg-background px-1 rounded">bed-2.jpg</code></li>
+                  <li>Share them with me and I'll add them to the site</li>
+                  <li>Use paths like <code className="bg-background px-1 rounded">/products/sofa-1.jpg</code> in your CSV</li>
+                </ol>
               </div>
             </CardContent>
           </Card>
