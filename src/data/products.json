@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Modern Sofa 7 seaterbat",
+    "name": " 7 Seaterbat Modern Sofa",
     "category": "Sofas",
     "price": 130000,
     "image": "/products/pic1.jpg",
@@ -12,25 +12,25 @@
   
   {
     "id": 2,
-    "name": "Modern Sofa 5 seaterbat Sofas",
+    "name": " 5 Seaterbat Sofas",
     "category": "Sofas",
-    "price": 95000,
-    "image": "/products/pic1.jpg",
+    "price": 90000,
+    "image": "/products/pic2.jpg",
     "isNew": true
   },
   
   {
     "id": 3,
-    "name": "Modern Sofa 5 seaterbat Sofas",
-    "category": "Sofas",
-    "price": 95000,
-    "image": "/products/pic3.jpg",
+    "name": "Modern 4 seater Dining Table",
+    "category": "Tables",
+    "price": 80000,
+    "image": "/products/pic10.jpg",
     "isNew": false
   },
   
   {
     "id": 4,
-    "name": "Modern Sofa 5 seaterbat Sofas",
+    "name": "Bunker Bed",
     "category": "Beds",
     "price": 95000,
     "image": "/products/pic4.jpg",
