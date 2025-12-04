@@ -158,7 +158,7 @@ const Home = () => {
             <Button asChild size="lg" variant="secondary">
               <Link to="/shop">Browse Collection</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="font-inter border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button asChild size="lg" variant="secondary" className="font-inter">
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
                 Contact Us Now
               </a>
