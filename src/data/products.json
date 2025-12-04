@@ -13,7 +13,7 @@
   {
     "id": 2,
     "name": "Modern Sofa 5 seaterbat Sofas",
-    "category": "Uncategorized",
+    "category": "Sofas",
     "price": 95000,
     "image": "/products/pic1.jpg",
     "isNew": true
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "name": "Modern Sofa 5 seaterbat Sofas",
-    "category": "Uncategorized",
+    "category": "Sofas",
     "price": 95000,
     "image": "/products/pic3.jpg",
     "isNew": false
@@ -31,7 +31,7 @@
   {
     "id": 4,
     "name": "Modern Sofa 5 seaterbat Sofas",
-    "category": "Uncategorized",
+    "category": "Beds",
     "price": 95000,
     "image": "/products/pic4.jpg",
     "isNew": false
@@ -40,7 +40,7 @@
   {
     "id": 5,
     "name": "Modern Sofa 5 seaterbat Sofas",
-    "category": "Uncategorized",
+    "category": "Sofas",
     "price": 95000,
     "image": "/products/pic5.jpg",
     "isNew": false
