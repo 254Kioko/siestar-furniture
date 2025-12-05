@@ -36,13 +36,53 @@
     "image": "/products/pic4.jpg",
     "isNew": false
   },
-
   {
     "id": 5,
-    "name": "Modern Sofa 5 seaterbat Sofas",
-    "category": "Sofas",
+    "name": "7 Seater Luxury Couch",
+    "category": "Couches",
+    "price": ,
+    "image": "/products/pic7.jpg",
+    "isNew": false
+  },
+
+  {
+    "id": 6,
+    "name": "Modern  Couch",
+    "category": "Couches",
     "price": 95000,
     "image": "/products/pic5.jpg",
+    "isNew": false
+  },
+    {
+    "id": 7,
+    "name": "7 Seater Corner Seat.",
+    "category": "Sofas",
+    "price": ,
+    "image": "/products/pic9.jpg",
+    "isNew": false
+  },
+{
+    "id": 8,
+    "name": "7 Seater Corner Seat.",
+    "category": "Sofas",
+    "price": ,
+    "image": "/products/pic8.jpg",
+    "isNew": false
+  },
+{
+    "id": 9,
+    "name": "7 Seater Corner Seat.",
+    "category": "Sofas",
+    "price": ,
+    "image": "/products/pic6.jpg",
+    "isNew": false
+  },
+{
+    "id": 10,
+    "name": "7 Seater Corner Seat.",
+    "category": "Sofas",
+    "price": ,
+    "image": "/products/pic3.jpg",
     "isNew": false
   }
 
