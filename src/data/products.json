@@ -1,24 +1,20 @@
 [
   {
     "id": 1,
-    "name": " 7 Seaterbat Modern Sofa",
+    "name": "7 Seaterbat Modern Sofa",
     "category": "Sofas",
     "price": 130000,
     "image": "/products/pic1.jpg",
     "isNew": true
   },
-
-
-  
   {
     "id": 2,
-    "name": " 5 Seaterbat Sofas",
+    "name": "5 Seaterbat Sofas",
     "category": "Sofas",
     "price": 90000,
     "image": "/products/pic2.jpg",
     "isNew": true
   },
-  
   {
     "id": 3,
     "name": "Modern 4 seater Dining Table",
@@ -27,7 +23,6 @@
     "image": "/products/pic10.jpg",
     "isNew": false
   },
-  
   {
     "id": 4,
     "name": "Bunker Bed",
@@ -40,52 +35,48 @@
     "id": 5,
     "name": "7 Seater Luxury Couch",
     "category": "Couches",
-    "price": ,
+    "price": null,
     "image": "/products/pic7.jpg",
     "isNew": false
   },
-
   {
     "id": 6,
-    "name": "Modern  Couch",
+    "name": "Modern Couch",
     "category": "Couches",
     "price": 95000,
     "image": "/products/pic5.jpg",
     "isNew": false
   },
-    {
+  {
     "id": 7,
-    "name": "7 Seater Corner Seat.",
+    "name": "7 Seater Corner Seat",
     "category": "Sofas",
-    "price": ,
+    "price": null,
     "image": "/products/pic9.jpg",
     "isNew": false
   },
-{
+  {
     "id": 8,
-    "name": "7 Seater Corner Seat.",
+    "name": "7 Seater Corner Seat",
     "category": "Sofas",
-    "price": ,
+    "price": null,
     "image": "/products/pic8.jpg",
     "isNew": false
   },
-{
+  {
     "id": 9,
-    "name": "7 Seater Corner Seat.",
+    "name": "7 Seater Corner Seat",
     "category": "Sofas",
-    "price": ,
+    "price": null,
     "image": "/products/pic6.jpg",
     "isNew": false
   },
-{
+  {
     "id": 10,
-    "name": "7 Seater Corner Seat.",
+    "name": "7 Seater Corner Seat",
     "category": "Sofas",
-    "price": ,
+    "price": null,
     "image": "/products/pic3.jpg",
     "isNew": false
   }
-
-
-  
 ]
