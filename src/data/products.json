@@ -78,5 +78,53 @@
     "price": null,
     "image": "/products/pic3.jpg",
     "isNew": false
+  },
+  {
+    "id": 11,
+    "name": "6 Seater Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining1.jpg",
+    "isNew": true
+  },
+  {
+    "id": 12,
+    "name": "4 Seater Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining2.jpg",
+    "isNew": true
+  },
+  {
+    "id": 13,
+    "name": "8 Seater Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining3.jpg",
+    "isNew": true
+  },
+  {
+    "id": 14,
+    "name": "Luxury Sofa Set",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa1.jpg",
+    "isNew": true
+  },
+  {
+    "id": 15,
+    "name": "Coffee Table",
+    "category": "Tables",
+    "price": null,
+    "image": "/products/table1.jpg",
+    "isNew": true
+  },
+  {
+    "id": 16,
+    "name": "Side Table",
+    "category": "Tables",
+    "price": null,
+    "image": "/products/table2.jpg",
+    "isNew": true
   }
 ]
