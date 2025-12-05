@@ -7,10 +7,11 @@ const ProductCard = ({ id, name, price, image, category }) => {
 
   // Message sent to WhatsApp with product image
   const imageUrl = image.startsWith('http') ? image : `${window.location.origin}${image}`;
+  const priceText = price ? `KES ${price.toLocaleString()}` : "Contact for price";
   const message = `Hello, I would like to order this product:
-  
+   
 🛋 *${name}*
-💵 Price: KES ${price.toLocaleString()}
+💵 Price: ${priceText}
 📂 Category: ${category}
 
 🖼 Product Image:
@@ -44,7 +45,7 @@ Thank you!`;
 
         {/* Price */}
         <p className="text-primary text-xl font-bold">
-          KES {price.toLocaleString()}
+          {price ? `KES ${price.toLocaleString()}` : "Contact for price"}
         </p>
 
         {/* WhatsApp Order Button */}
