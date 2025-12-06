@@ -55,7 +55,7 @@ Thank you!`;
           className="w-full bg-green-600 hover:bg-green-700 text-white"
           onClick={() => window.open(whatsappLink, "_blank")}
         >
-          Order on WhatsApp
+          Order
         </Button>
       </CardContent>
     </Card>
