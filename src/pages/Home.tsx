@@ -207,7 +207,7 @@ const Home = () => {
               </div>
               
               <Button asChild size="lg" className="group">
-                <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Jogoo+Road,+Nairobi,+Kenya" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   Get Directions
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
