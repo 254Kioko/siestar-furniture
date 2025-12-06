@@ -262,5 +262,237 @@
     "price": null,
     "image": "/products/sofa18.jpg",
     "isNew": true
+  },
+  {
+    "id": 34,
+    "name": "Modern 6 Seater Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining4.jpg",
+    "isNew": true
+  },
+  {
+    "id": 35,
+    "name": "Elegant 8 Seater Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining5.jpg",
+    "isNew": true
+  },
+  {
+    "id": 36,
+    "name": "Classic Wooden Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining6.jpg",
+    "isNew": true
+  },
+  {
+    "id": 37,
+    "name": "Contemporary Glass Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining7.png",
+    "isNew": true
+  },
+  {
+    "id": 38,
+    "name": "Rustic Farmhouse Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining8.jpg",
+    "isNew": true
+  },
+  {
+    "id": 39,
+    "name": "Marble Top Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining9.jpg",
+    "isNew": true
+  },
+  {
+    "id": 40,
+    "name": "Round Wooden Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining10.jpg",
+    "isNew": true
+  },
+  {
+    "id": 41,
+    "name": "Extendable Dining Table Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining11.jpg",
+    "isNew": true
+  },
+  {
+    "id": 42,
+    "name": "Modern White Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining12.jpg",
+    "isNew": true
+  },
+  {
+    "id": 43,
+    "name": "Dark Oak Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining13.jpg",
+    "isNew": true
+  },
+  {
+    "id": 44,
+    "name": "Compact 4 Seater Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining14.jpg",
+    "isNew": true
+  },
+  {
+    "id": 45,
+    "name": "Luxury Dining Room Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dininng15.jpg",
+    "isNew": true
+  },
+  {
+    "id": 46,
+    "name": "Scandinavian Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining16.jpg",
+    "isNew": true
+  },
+  {
+    "id": 47,
+    "name": "Industrial Style Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining17.jpg",
+    "isNew": true
+  },
+  {
+    "id": 48,
+    "name": "Walnut Finish Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining18.jpg",
+    "isNew": true
+  },
+  {
+    "id": 49,
+    "name": "10 Seater Conference Dining",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining19.jpg",
+    "isNew": true
+  },
+  {
+    "id": 50,
+    "name": "Mahogany Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining20.jpg",
+    "isNew": true
+  },
+  {
+    "id": 51,
+    "name": "Square Dining Table Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining21.jpg",
+    "isNew": true
+  },
+  {
+    "id": 52,
+    "name": "Oval Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining22.jpg",
+    "isNew": true
+  },
+  {
+    "id": 53,
+    "name": "Upholstered Chair Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining23.jpg",
+    "isNew": true
+  },
+  {
+    "id": 54,
+    "name": "Bench Style Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining24.jpg",
+    "isNew": true
+  },
+  {
+    "id": 55,
+    "name": "High-Back Chair Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining25.jpg",
+    "isNew": true
+  },
+  {
+    "id": 56,
+    "name": "Teak Wood Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining26.jpg",
+    "isNew": true
+  },
+  {
+    "id": 57,
+    "name": "Pedestal Dining Table",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining27.jpg",
+    "isNew": true
+  },
+  {
+    "id": 58,
+    "name": "Butterfly Leaf Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining28.jpg",
+    "isNew": true
+  },
+  {
+    "id": 59,
+    "name": "Counter Height Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining29.jpg",
+    "isNew": true
+  },
+  {
+    "id": 60,
+    "name": "Premium Executive Dining Set",
+    "category": "Dining Sets",
+    "price": null,
+    "image": "/products/dining30.jpg",
+    "isNew": true
+  },
+  {
+    "id": 61,
+    "name": "Modern Multi-Tier Shoe Rack",
+    "category": "Shoe Racks",
+    "price": null,
+    "image": "/products/rack1.jpg",
+    "isNew": true
+  },
+  {
+    "id": 62,
+    "name": "Wooden Shoe Cabinet",
+    "category": "Shoe Racks",
+    "price": null,
+    "image": "/products/rack2.jpg",
+    "isNew": true
   }
 ]
