@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sofa, Award, Truck } from "lucide-react";
+import { ArrowRight, Sofa, Award, Truck, MapPin, Clock, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-furniture.jpg";
+import siestarPlace from "@/assets/siestarplace.jpg";
 import { getWhatsAppLink } from "@/config/whatsapp";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import products from "@/data/products.json";
 import ProductCard from "@/components/ProductCard";
-
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -141,6 +141,78 @@ const Home = () => {
               title="Expert Support"
               description="Our team is ready to help you find the perfect furniture."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Visit Our Showroom Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/10 rounded-2xl blur-3xl"></div>
+              <img 
+                src={siestarPlace} 
+                alt="Siestar Furnitures Showroom"
+                className="relative rounded-2xl shadow-2xl w-full h-auto object-cover"
+              />
+            </div>
+            
+            <div className="space-y-8">
+              <div className="inline-block">
+                <Badge className="bg-primary/10 text-primary border-primary/20 font-inter">
+                  Visit Us Today
+                </Badge>
+              </div>
+              
+              <h2 className="font-playfair font-bold text-4xl md:text-5xl text-foreground">
+                Our Showroom in
+                <span className="text-primary"> Nairobi</span>
+              </h2>
+              
+              <p className="font-inter text-lg text-muted-foreground leading-relaxed">
+                Experience our furniture collection in person. Visit our showroom to see the quality and craftsmanship of each piece. Our friendly staff is ready to help you find the perfect furniture for your home.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-playfair font-semibold text-lg text-foreground">Location</h4>
+                    <p className="font-inter text-muted-foreground">Nairobi, Kenya</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-playfair font-semibold text-lg text-foreground">Opening Hours</h4>
+                    <p className="font-inter text-muted-foreground">Mon - Sat: 8:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-playfair font-semibold text-lg text-foreground">Contact</h4>
+                    <p className="font-inter text-muted-foreground">WhatsApp for inquiries</p>
+                  </div>
+                </div>
+              </div>
+              
+              <Button asChild size="lg" className="group">
+                <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Get Directions
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

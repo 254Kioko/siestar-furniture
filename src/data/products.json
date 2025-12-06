@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "7 Seaterbat Modern Sofa",
+    "name": "7 Seater Modern Sofa",
     "category": "Sofas",
     "price": 130000,
     "image": "/products/pic1.jpg",
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "name": "5 Seaterbat Sofas",
+    "name": "5 Seater Sofas",
     "category": "Sofas",
     "price": 90000,
     "image": "/products/pic2.jpg",
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "name": "Modern 4 seater Dining Table",
+    "name": "Modern 4 Seater Dining Table",
     "category": "Dining Sets",
     "price": 80000,
     "image": "/products/pic10.jpg",
@@ -125,6 +125,142 @@
     "category": "Tables",
     "price": null,
     "image": "/products/table2.jpg",
+    "isNew": true
+  },
+  {
+    "id": 17,
+    "name": "L-Shaped Grey Sectional",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa2.jpg",
+    "isNew": true
+  },
+  {
+    "id": 18,
+    "name": "Cream Velvet Sofa Set",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa3.jpg",
+    "isNew": true
+  },
+  {
+    "id": 19,
+    "name": "Classic Brown Leather Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa4.jpg",
+    "isNew": true
+  },
+  {
+    "id": 20,
+    "name": "Modern Grey Sofa Set",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa5.jpg",
+    "isNew": true
+  },
+  {
+    "id": 21,
+    "name": "Tufted Chesterfield Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa6.jpg",
+    "isNew": true
+  },
+  {
+    "id": 22,
+    "name": "Navy Blue Velvet Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa7.jpg",
+    "isNew": true
+  },
+  {
+    "id": 23,
+    "name": "Beige Corner Sectional",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa8.jpg",
+    "isNew": true
+  },
+  {
+    "id": 24,
+    "name": "White Modern Sofa Set",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa9.jpg",
+    "isNew": true
+  },
+  {
+    "id": 25,
+    "name": "Burgundy Leather Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa10.jpg",
+    "isNew": true
+  },
+  {
+    "id": 26,
+    "name": "Charcoal Grey Sectional",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa11.jpg",
+    "isNew": true
+  },
+  {
+    "id": 27,
+    "name": "Tan Leather Classic Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa12.jpg",
+    "isNew": true
+  },
+  {
+    "id": 28,
+    "name": "Olive Green Velvet Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa13.jpg",
+    "isNew": true
+  },
+  {
+    "id": 29,
+    "name": "Caramel Brown Sofa Set",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa14.jpg",
+    "isNew": true
+  },
+  {
+    "id": 30,
+    "name": "Pearl White Corner Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa15.jpg",
+    "isNew": true
+  },
+  {
+    "id": 31,
+    "name": "Slate Grey Modern Sofa",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa16.jpg",
+    "isNew": true
+  },
+  {
+    "id": 32,
+    "name": "Chocolate Brown Sectional",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa17.jpg",
+    "isNew": true
+  },
+  {
+    "id": 33,
+    "name": "Ivory Cream Sofa Set",
+    "category": "Sofas",
+    "price": null,
+    "image": "/products/sofa18.jpg",
     "isNew": true
   }
 ]
