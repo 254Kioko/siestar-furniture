@@ -44,9 +44,11 @@ Thank you!`;
         <h3 className="font-semibold text-lg">{name}</h3>
 
         {/* Price */}
-        <p className="text-primary text-xl font-bold">
-          {price ? `KES ${price.toLocaleString()}` : "Contact for price"}
-        </p>
+        {price && (
+          <p className="text-primary text-xl font-bold">
+            KES {price.toLocaleString()}
+          </p>
+        )}
 
         {/* WhatsApp Order Button */}
         <Button
