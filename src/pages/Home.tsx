@@ -181,7 +181,7 @@ const Home = () => {
                   </div>
                   <div>
                     <h4 className="font-playfair font-semibold text-lg text-foreground">Location</h4>
-                    <p className="font-inter text-muted-foreground">Nairobi, Kenya</p>
+                    <p className="font-inter text-muted-foreground">Jogoo Road, Nairobi, Kenya</p>
                   </div>
                 </div>
                 
