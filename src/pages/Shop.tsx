@@ -25,8 +25,35 @@ const categories = [
   "Office Chairs",
   "Night Stands",
   "Tables",
-  "Wardrobes"
+  "Wardrobes",
+  "Shoe Racks"
 ];
+
+// Function to shuffle products by category for better variety
+const shuffleByCategory = (products: typeof productsData) => {
+  const byCategory: { [key: string]: typeof productsData } = {};
+  
+  products.forEach((product) => {
+    if (!byCategory[product.category]) {
+      byCategory[product.category] = [];
+    }
+    byCategory[product.category].push(product);
+  });
+  
+  const categoryKeys = Object.keys(byCategory);
+  const result: typeof productsData = [];
+  let maxLength = Math.max(...categoryKeys.map((k) => byCategory[k].length));
+  
+  for (let i = 0; i < maxLength; i++) {
+    categoryKeys.forEach((category) => {
+      if (byCategory[category][i]) {
+        result.push(byCategory[category][i]);
+      }
+    });
+  }
+  
+  return result;
+};
 
 const Shop = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -67,11 +94,14 @@ const Shop = () => {
     });
 
     if (sortBy === "price-low") {
-      filtered.sort((a, b) => a.price - b.price);
+      filtered.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
     } else if (sortBy === "price-high") {
-      filtered.sort((a, b) => b.price - a.price);
+      filtered.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
     } else if (sortBy === "new") {
       filtered.sort((a, b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+    } else if (selectedCategory === "All" && sortBy === "default") {
+      // Mix categories when viewing All with default sort
+      filtered = shuffleByCategory(filtered);
     }
 
     return filtered;
