@@ -54,13 +54,7 @@ const Footer = () => {
           <p className="text-muted-foreground font-inter text-sm">
             © {new Date().getFullYear()} {BUSINESS_NAME}. All rights reserved.
           </p>
-          <Link 
-            to="/admin" 
-            className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors font-inter text-sm"
-          >
-            <Settings className="h-4 w-4" />
-            <span>Admin</span>
-          </Link>
+         
         </div>
       </div>
     </footer>
