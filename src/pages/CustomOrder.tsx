@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Upload, X, MessageCircle, Palette, CheckCircle } from "lucide-react";
+import { Upload, X, MessageCircle, Palette, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import { WHATSAPP_NUMBER, BUSINESS_NAME } from "@/config/whatsapp";
+import { supabase } from "@/integrations/supabase/client";
 
 interface FormData {
   name: string;
@@ -26,6 +27,8 @@ const CustomOrder = () => {
   const [images, setImages] = useState<File[]>([]);
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadedUrls, setUploadedUrls] = useState<string[]>([]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -95,14 +98,6 @@ const CustomOrder = () => {
       });
       return false;
     }
-    if (!formData.phone.trim()) {
-      toast({
-        title: "Phone number required",
-        description: "Please enter your phone number.",
-        variant: "destructive",
-      });
-      return false;
-    }
     if (!formData.description.trim()) {
       toast({
         title: "Description required",
@@ -114,35 +109,84 @@ const CustomOrder = () => {
     return true;
   };
 
-  const handleWhatsAppSubmit = () => {
+  const uploadImages = async (): Promise<string[]> => {
+    const urls: string[] = [];
+    
+    for (const file of images) {
+      const timestamp = Date.now();
+      const randomId = Math.random().toString(36).substring(7);
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${timestamp}-${randomId}.${fileExt}`;
+      
+      const { error } = await supabase.storage
+        .from('custom-orders')
+        .upload(fileName, file);
+      
+      if (error) {
+        console.error('Upload error:', error);
+        throw new Error(`Failed to upload ${file.name}`);
+      }
+      
+      const { data: urlData } = supabase.storage
+        .from('custom-orders')
+        .getPublicUrl(fileName);
+      
+      urls.push(urlData.publicUrl);
+    }
+    
+    return urls;
+  };
+
+  const handleWhatsAppSubmit = async () => {
     if (!validateForm()) return;
 
-    const imageNote =
-      images.length > 0
-        ? `\n\n📷 I have ${images.length} reference image(s) to share with you.`
+    setIsUploading(true);
+    
+    try {
+      let imageUrls: string[] = [];
+      
+      if (images.length > 0) {
+        imageUrls = await uploadImages();
+        setUploadedUrls(imageUrls);
+      }
+
+      const phoneInfo = formData.phone.trim() 
+        ? `\n*Phone:* ${formData.phone.trim()}` 
         : "";
 
-    const message = `🛋️ *Custom Furniture Order Request*
+      const imageLinks = imageUrls.length > 0
+        ? `\n\n📷 *Reference Images:*\n${imageUrls.map((url, i) => `${i + 1}. ${url}`).join('\n')}`
+        : "";
 
-*Name:* ${formData.name.trim()}
-*Phone:* ${formData.phone.trim()}
+      const message = `🛋️ *Custom Furniture Order Request*
+
+*Name:* ${formData.name.trim()}${phoneInfo}
 
 *Furniture Description:*
-${formData.description.trim()}${imageNote}
+${formData.description.trim()}${imageLinks}
 
 ---
 Sent from ${BUSINESS_NAME} website`;
 
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const whatsappUrl = isMobile
-      ? `whatsapp://send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`
-      : `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      const whatsappUrl = isMobile
+        ? `whatsapp://send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`
+        : `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
-    setShowSuccess(true);
-    
-    setTimeout(() => {
-      window.open(whatsappUrl, "_blank");
-    }, 500);
+      setShowSuccess(true);
+      
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank");
+      }, 500);
+    } catch (error) {
+      toast({
+        title: "Upload failed",
+        description: "Failed to upload images. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   if (showSuccess) {
@@ -158,7 +202,7 @@ Sent from ${BUSINESS_NAME} website`;
               Opening WhatsApp...
             </h2>
             <p className="text-muted-foreground mb-6">
-              Your custom order details are ready! Please send the message and attach your reference images directly in WhatsApp.
+              Your custom order details and image links are ready! The message includes clickable links to view your reference images.
             </p>
             <div className="flex flex-col gap-3">
               <Button onClick={handleWhatsAppSubmit} className="w-full">
@@ -244,7 +288,7 @@ Sent from ${BUSINESS_NAME} website`;
                   {/* Phone Field */}
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-foreground font-medium">
-                      Phone Number *
+                      Phone Number (Optional)
                     </Label>
                     <Input
                       id="phone"
@@ -278,7 +322,7 @@ Sent from ${BUSINESS_NAME} website`;
                       Reference Images (Optional)
                     </Label>
                     <p className="text-sm text-muted-foreground">
-                      Upload up to 5 images for reference. You'll attach these directly in WhatsApp.
+                      Upload up to 5 images for reference. Links will be included in your WhatsApp message.
                     </p>
                     
                     <div className="border-2 border-dashed border-border rounded-xl p-6 text-center hover:border-primary/50 transition-colors">
@@ -345,14 +389,23 @@ Sent from ${BUSINESS_NAME} website`;
                     onClick={handleWhatsAppSubmit}
                     size="lg"
                     className="w-full h-14 text-lg font-semibold mt-4"
+                    disabled={isUploading}
                   >
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Send Your Idea on WhatsApp
+                    {isUploading ? (
+                      <>
+                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                        Uploading Images...
+                      </>
+                    ) : (
+                      <>
+                        <MessageCircle className="w-5 h-5 mr-2" />
+                        Send Your Idea on WhatsApp
+                      </>
+                    )}
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
-                    Your images won't be sent from the website. You'll attach them 
-                    directly in WhatsApp for the best quality.
+                    Your images will be uploaded and links will be included in the WhatsApp message.
                   </p>
                 </div>
               </div>
