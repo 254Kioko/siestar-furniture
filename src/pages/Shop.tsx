@@ -26,7 +26,8 @@ const categories = [
   "Night Stands",
   "Tables",
   "Wardrobes",
-  "Shoe Racks"
+  "Shoe Racks",
+  "TV Stands"
 ];
 
 // Function to shuffle products by category for better variety
