@@ -26,6 +26,9 @@ const Navbar = () => {
           <Link to="/shop" className="font-inter text-sm font-medium text-foreground hover:text-primary transition-colors">
             Shop
           </Link>
+          <Link to="/custom-order" className="font-inter text-sm font-medium text-foreground hover:text-primary transition-colors">
+            Custom Order
+          </Link>
           <Button asChild variant="default" size="sm">
             <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
               Contact Us
@@ -60,6 +63,13 @@ const Navbar = () => {
               className="font-inter text-sm font-medium text-foreground hover:text-primary transition-colors py-2"
             >
               Shop
+            </Link>
+            <Link 
+              to="/custom-order" 
+              onClick={closeMenu}
+              className="font-inter text-sm font-medium text-foreground hover:text-primary transition-colors py-2"
+            >
+              Custom Order
             </Link>
             <Button asChild variant="default" size="sm" className="w-full">
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer">
