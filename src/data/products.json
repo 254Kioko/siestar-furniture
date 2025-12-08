@@ -494,5 +494,101 @@
     "price": null,
     "image": "/products/rack2.jpg",
     "isNew": true
+  },
+  {
+    "id": 63,
+    "name": "Slim Shoe Rack",
+    "category": "Shoe Racks",
+    "price": null,
+    "image": "/products/rack3.jpg",
+    "isNew": true
+  },
+  {
+    "id": 64,
+    "name": "Bamboo Shoe Organizer",
+    "category": "Shoe Racks",
+    "price": null,
+    "image": "/products/rack4.jpg",
+    "isNew": true
+  },
+  {
+    "id": 65,
+    "name": "King Size Bed Frame",
+    "category": "Beds",
+    "price": null,
+    "image": "/products/bed2.jpg",
+    "isNew": true
+  },
+  {
+    "id": 66,
+    "name": "Upholstered Queen Bed",
+    "category": "Beds",
+    "price": null,
+    "image": "/products/bed9.jpg",
+    "isNew": true
+  },
+  {
+    "id": 67,
+    "name": "Platform Bed with Storage",
+    "category": "Beds",
+    "price": null,
+    "image": "/products/bed10.jpg",
+    "isNew": true
+  },
+  {
+    "id": 68,
+    "name": "Modern Canopy Bed",
+    "category": "Beds",
+    "price": null,
+    "image": "/products/bed11.jpg",
+    "isNew": true
+  },
+  {
+    "id": 69,
+    "name": "Tufted Headboard Bed",
+    "category": "Beds",
+    "price": null,
+    "image": "/products/bed12.jpg",
+    "isNew": true
+  },
+  {
+    "id": 70,
+    "name": "Sleigh Bed Frame",
+    "category": "Beds",
+    "price": null,
+    "image": "/products/bed13.png",
+    "isNew": true
+  },
+  {
+    "id": 71,
+    "name": "Marble Top Coffee Table",
+    "category": "Tables",
+    "price": null,
+    "image": "/products/table3.jpg",
+    "isNew": true
+  },
+  {
+    "id": 72,
+    "name": "Wooden Accent Table",
+    "category": "Tables",
+    "price": null,
+    "image": "/products/table4.jpg",
+    "isNew": true
+  },
+  {
+    "id": 73,
+    "name": "Modern TV Stand",
+    "category": "TV Stands",
+    "price": null,
+    "image": "/products/tvstand2.jpg",
+    "isNew": true
+  },
+  {
+    "id": 74,
+    "name": "Entertainment Center",
+    "category": "TV Stands",
+    "price": null,
+    "image": "/products/tvstand3.jpg",
+    "isNew": true
   }
 ]
