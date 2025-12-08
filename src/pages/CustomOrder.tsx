@@ -285,21 +285,7 @@ Sent from ${BUSINESS_NAME} website`;
                     />
                   </div>
 
-                  {/* Phone Field */}
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-foreground font-medium">
-                      Phone Number (Optional)
-                    </Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder="e.g., +254 7XX XXX XXX"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="h-12"
-                    />
-                  </div>
+                
 
                   {/* Description Field */}
                   <div className="space-y-2">
@@ -399,13 +385,12 @@ Sent from ${BUSINESS_NAME} website`;
                     ) : (
                       <>
                         <MessageCircle className="w-5 h-5 mr-2" />
-                        Send Your Idea on WhatsApp
+                        Send 
                       </>
                     )}
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
-                    Your images will be uploaded and links will be included in the WhatsApp message.
                   </p>
                 </div>
               </div>
