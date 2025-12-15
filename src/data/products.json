@@ -36,7 +36,7 @@
     "name": "7 Seater Luxury Couch",
     "category": "Couches",
     "price": null,
-    "image": "/products/pic7.jpg",
+    "image": "/products/couch1.jpg",
     "isNew": false
   },
   {
@@ -44,8 +44,144 @@
     "name": "Modern Couch",
     "category": "Couches",
     "price": 95000,
-    "image": "/products/pic5.jpg",
+    "image": "/products/couch2.jpg",
     "isNew": false
+  },
+  {
+    "id": 75,
+    "name": "L-Shaped Grey Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch3.jpg",
+    "isNew": true
+  },
+  {
+    "id": 76,
+    "name": "Classic Leather Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch4.jpg",
+    "isNew": true
+  },
+  {
+    "id": 77,
+    "name": "Velvet Corner Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch5.jpg",
+    "isNew": true
+  },
+  {
+    "id": 78,
+    "name": "Modern Sectional Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch6.jpg",
+    "isNew": true
+  },
+  {
+    "id": 79,
+    "name": "Tufted Couch Set",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch7.jpg",
+    "isNew": true
+  },
+  {
+    "id": 80,
+    "name": "Cream Fabric Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch8.jpg",
+    "isNew": true
+  },
+  {
+    "id": 81,
+    "name": "Brown Leather Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch9.jpg",
+    "isNew": true
+  },
+  {
+    "id": 82,
+    "name": "Contemporary Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch10.jpg",
+    "isNew": true
+  },
+  {
+    "id": 83,
+    "name": "Elegant Couch Set",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch11.jpg",
+    "isNew": true
+  },
+  {
+    "id": 84,
+    "name": "Compact Modern Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch12.jpg",
+    "isNew": true
+  },
+  {
+    "id": 85,
+    "name": "Luxury Couch Set",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch13.jpg",
+    "isNew": true
+  },
+  {
+    "id": 86,
+    "name": "Navy Blue Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch14.jpg",
+    "isNew": true
+  },
+  {
+    "id": 87,
+    "name": "Beige Couch Set",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch15.jpg",
+    "isNew": true
+  },
+  {
+    "id": 88,
+    "name": "Chesterfield Couch",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch16.jpg",
+    "isNew": true
+  },
+  {
+    "id": 89,
+    "name": "Modular Couch System",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch17.jpg",
+    "isNew": true
+  },
+  {
+    "id": 90,
+    "name": "Reclining Couch Set",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch18.jpg",
+    "isNew": true
+  },
+  {
+    "id": 91,
+    "name": "Premium Couch Collection",
+    "category": "Couches",
+    "price": null,
+    "image": "/products/couch19.jpg",
+    "isNew": true
   },
   {
     "id": 7,
